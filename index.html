@@ -20,23 +20,23 @@
         <section class="inputs">
             <div name="tipo-consorcio">
                 <label for="selecionar-tipo-consorcio"><strong>Tipo de Consórcio</strong></label>
-                <select class="selection-input" name="selecionar-tipo-consorcio" title="Selecionar tipo de consórcio">
-                        <option value="1">Imóvel</option>
-                        <option value="2">Veículo</option>
+                <select class="selection-input" id="tipo-consorcio" name="selecionar-tipo-consorcio" title="Selecionar tipo de consórcio">
+                        <option value="imovel">Imóvel</option>
+                        <option value="veiculo">Veículo</option>
                 </select>
             </div>
 
             <div name="tipo-consulta">
                 <label for="selecionar-tipo-consulta"><strong>Tipo de Consulta</strong></label>
-                <select class="selection-input" name="selecionar-tipo-consulta" title="Selecionar tipo de consulta">
-                    <option value="1">Crédito</option>
-                    <option value="2">Parcela</option>
+                <select class="selection-input" id="tipo-consulta" name="selecionar-tipo-consulta" title="Selecionar tipo de consulta">
+                    <option value="credito">Crédito</option>
+                    <option value="parcela">Parcela</option>
                 </select>
             </div>
 
             <div name="valor-desejado">
                 <label for="valor"><strong>Valor</strong></label>
-            <input class="default-input" type="number" name="Valor" id="valor" placeholder="0,00">
+            <input class="default-input" type="number" name="Valor" id="valor" placeholder="0,00" step="any">
             </div>
 
             <div name="nome-completo">
@@ -56,7 +56,7 @@
 
             <div name="cidade">
                 <label for="cidade"><strong>Cidade</strong></label>
-                <input class="default-input" type="tel" name="Cidade" id="cidade" placeholder="Cidade onde mora">
+                <input class="default-input" type="text" name="Cidade" id="cidade" placeholder="Cidade onde mora">
             </div>
 
             <div name="simular">
@@ -78,7 +78,7 @@
         </div>
         <p>Copyright &copy;2024 - Isocred</p>
     </footer>
-    <script src="script/socialData.js"></script>
+    <script src="script/data.js"></script>
     <script src="script/onLoad.js"></script>
     <script src="script/simulate.js"></script>
 </body>
