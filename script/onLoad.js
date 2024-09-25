@@ -35,10 +35,9 @@ function onLoad() {
         function processValue() {
             let split = telefone.value.split("")
             let lastKey = split[split.length - 1]
-            console.log(lastKey)
+
             if (!Number(lastKey) && Number(lastKey) != 0 || lastKey == " " && lastKeyName != "Backspace") {
                 clearLastKey(split, telefone)
-
                 return
             }
             
@@ -54,23 +53,26 @@ function onLoad() {
                 }
                 //telefone.value = `${split[0]} ${split[1]}-` // Já estava fazendo errado, um array em js começa em 0
             } else if (telefone.value.length >= 16) {
-                console.log("Cabo!")
                 clearLastKey(split, telefone)
             }
         }
 
-        function onKeyUp(event) {
+        function onKeyDown(event) {
             lastKeyName = event.key
-            console.log(lastKeyName)
         }
 
-        telefone.addEventListener("keydown", onKeyUp)
+        telefone.addEventListener("keydown", onKeyDown)
         telefone.addEventListener("input", processValue)
     }
 
     function valor() {
-        let valor = document.querySelector("input#valor")
-        valor.value = "0,00"
+        /*let valor = document.querySelector("input#valor")
+        let position = 0
+        let lastKeyName
+
+        function onKeyDown(event) {
+            lastKeyName = event.key
+        }
 
         function processValue() {
             let split = valor.value.split("")
@@ -78,18 +80,35 @@ function onLoad() {
 
             if (!Number(lastKey) && lastKey != 0) {
                 clearLastKey(split, valor)
+                return
+            }
+            split[split.length - position - 2] = lastKey
+            console.log(split)
+            position++
+            console.log(position)
+            valor.value = ""
+
+            for (let index = 0; index < split.length - 1; index++) {
+                const element = split[index];
+
+                valor.value += element
             }
         }
 
-        valor.addEventListener("input", processValue)
+        valor.value = "0,00"
+        valor.addEventListener("keydown", onKeyDown)
+        valor.addEventListener("input", processValue)*/
+
+        $('#valor').mask('000.000.000.000.000,00', {reverse: true});
     }
 
     function footerLinks() {
-        let facebook = document.querySelector("input#face")
+        /*let facebook = document.querySelector("input#face")
         let whatsapp = document.querySelector("input#zap")
-        let instagram = document.querySelector("input#insta")
+        let instagram = document.querySelector("input#insta")*/
         
-        let inputs = [facebook, whatsapp, instagram]
+        let divMedia = document.querySelector("div.social-media")
+        const inputs = divMedia.querySelectorAll("input")
 
         for (let index = 0; index < inputs.length; index++) {
             const element = inputs[index];
