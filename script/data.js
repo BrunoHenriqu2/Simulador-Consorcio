@@ -7,7 +7,7 @@ Parcela Integral = valor + 23% / 180
 let valueData = {
     imovel: {
         term: 180,
-        percent: 0.23
+        percent: 0.23,
     },
     veiculo: {
         term: 100,
