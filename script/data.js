@@ -11,14 +11,15 @@ let valueData = {
     },
     veiculo: {
         term: 100,
-        percent: 0.23,
+        percent: 0.16,
     }
 }
 
 let socialData = {
         facebook: "https://www.facebook.com/profile.php?id=100091989860329",
-        whatsapp: "https://wa.me/5549984224181",
+        whatsapp: "https://wa.me/554999773753",
         instagram: "https://www.instagram.com/isocred_tg/",
+        tiktok: "https://www.tiktok.com/@isocred_tg"
 }
 
 function goTo(link) {
